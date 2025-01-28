@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora&display=swap');
+
+code, pre {
+    font-family: 'Sora', sans-serif;
+    color: #2f68e1;
+    font-size: 12px;
+    overflow-x: auto;
+}
+
+body {
+    font-family: 'Sora', sans-serif;
+    background-color: rgb(67, 70, 84);
+    line-height: 1.1 !important; /* Adjust line height for better readability */
+    font-size: 12px; /* Slightly reduce font size */
+    margin: 0;
+    padding: 0;
+}
+
+ul li a {
+    color: #2f68e1 !important;
+}
+
+.wrapper {
+    background-color: white !important;
+    padding: 2px;
+}
+
+main, .main, .content, .post-content {
+    background-color: white;
+    padding: 3px; /* Reduce padding */
+}
+
+.header, ::before, header h1, footer {
+    font-family: 'Sora', sans-serif;
+}
+
+header, footer {
+    display: none;
+}
+
+.content-wrapper {
+    background-color: white;
+    padding: 3px; /* Reduce padding */
+}
+
+.markdown-body .post-content a {
+    color: blue;
+}
+
+@media print {
+    .pagebreak {
+        display: block;
+        page-break-before: always;
+        page-break-after: always;
+    }
+
+    .print-only {
+        display: block;
+    }
+
+    /* Hides the markdown editor for PDF export */
+    #markdown-editor {
+        display: none !important;
+    }
+
+    /* Expands preview area to full width */
+    #preview {
+        width: 100% !important;
+        padding: 20px;
+    }
+
+    /* Optimizes text scaling for PDF fit */
+    body {
+        background: none !important;
+        color: black !important;
+        font-size: 10pt !important;
+        margin: 0;
+        padding: 0;
+    }
+
+    /* Reduces page breaks and ensures correct alignment */
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Slight scaling adjustment to fit on one page */
+    #preview {
+        transform: scale(0.95);
+        transform-origin: top left;
+    }
+
+    /* Ensures consistent spacing between elements */
+    h1, h2, h3, h4, h5, h6, p, a {
+        color: black !important;
+        margin: 2px 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Prevents sections from splitting across pages */
+    h1, h2, h3, h4, h5, h6, p, ul, li {
+        page-break-inside: avoid;
+    }
+
+    /* Ensures proper PDF margin settings */
+    @page {
+        size: A4;
+        margin: 0.5in;
+    }
+}
+
+@media screen {
+    body {
+        transform: scale(1.5);
+        transform-origin: top center;
+        width: calc(100% / 1.5);
+        margin: 0 auto;
+        overflow-x: hidden;
+    }
+
+    .print-only {
+        display: none;
+    }
+}
+
+:root {
+    --base-indent: 20px;
+}
+
+h4 {
+    margin-left: calc(var(--base-indent) * 1);
+}
+
+h5 {
+    margin-left: calc(var(--base-indent) * 2);
+}
+
+h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 2px; /* Further reduce spacing after headers */
+}
+
+ul {
+    margin-bottom: 1px; /* Reduce space after list items */
+}
+
+.experience-education-space {
+    margin-bottom: 1px; /* Adjust this value for smaller space */
+}
+
+.experience-entry {
+    margin-bottom: 2px; /* Adjust this value for balanced space between entries */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 5px; /* Add margin to avoid overlap */
+}
+
+table, th, td {
+    border: 1px solid black;
+    padding: 3px; /* Adjust padding for table cells */
+}
+
+th, td {
+    text-align: left;
+}
+
+/* Reducing space between contact info and technical skills header */
+header, footer, .header-bar {
+    margin-bottom: 0 !important;
+}
+
+h2, h3 {
+    margin-top: 4px; /* Adjust spacing for headers */
+}

@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Markdown Resume Editor</title>
-    <!-- Link to External CSS -->
     <link rel="stylesheet" href="style.css">
-    <!-- Link Modernist Theme -->
-    <link rel="stylesheet" href="https://path-to-modernist-theme.css">
 </head>
 <body>
+    <!-- Toolbar Section -->
+    <div id="toolbar">
+        Markdown Resume Editor
+    </div>
+
+    <!-- Main Container -->
     <div class="container">
         <!-- Markdown Editor -->
         <textarea id="markdown-editor" placeholder="Write your Markdown here..."></textarea>
@@ -18,11 +21,13 @@
         <div id="preview"></div>
     </div>
 
-    <!-- PDF Export Button -->
-    <button id="export-pdf">Export PDF</button>
+    <!-- Bottom Tools Section -->
+    <div id="bottom-tools">
+        <button id="export-pdf">Export PDF</button>
+    </div>
 
-    <!-- Link to External JS -->
-    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
-    <script src="script.js"></script>
+    <!-- JavaScript -->
+    <script src="marked.min.js?v=4"></script>
+    <script src="script.js"></script>    
 </body>
 </html>

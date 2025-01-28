@@ -1,64 +1,104 @@
-/* General Reset */
+/* Reset default styles */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Page Layout */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Sora', sans-serif;
+    background-color: rgb(67, 70, 84);
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     height: 100vh;
-    background-color: #f9f9f9;
+    color: white;
 }
 
-/* Container for Split View */
+/* Toolbar at the Top */
+#toolbar {
+    width: 100%;
+    height: 50px;
+    background: #2f2f2f;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: bold;
+    border-bottom: 2px solid #444;
+}
+
+/* Main Container for Editor & Preview */
 .container {
     display: flex;
-    flex: 1;
+    flex-direction: row;
+    width: 100%;
+    height: calc(100vh - 100px); /* Leaves space for toolbar and bottom tools */
+    padding: 10px;
+    gap: 10px;
+}
+
+/* Markdown Editor & Preview Pane */
+#markdown-editor, #preview {
+    flex: 1; /* Both take equal space */
+    height: 100%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: white;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
 }
 
 /* Markdown Editor */
 #markdown-editor {
-    width: 50%;
-    height: 100%;
-    padding: 15px;
-    font-size: 16px;
-    border: none;
-    outline: none;
     resize: none;
-    background-color: #fff;
-    color: #333;
-    border-right: 1px solid #ccc;
+    font-size: 14px;
     font-family: 'Courier New', monospace;
-}
-
-/* Live Preview */
-#preview {
+    background: #f9f9f9;
+    border-right: 2px solid #ddd;
     width: 50%;
-    height: 100%;
-    padding: 15px;
-    overflow-y: auto;
-    background-color: #fff;
-    border-left: 1px solid #ccc;
-    color: #333;
-    line-height: 1.5;
 }
 
-/* Export Button */
+/* Live Preview Pane */
+#preview {
+    color: black !important;
+    background: white !important;
+    font-size: 14px;
+    font-family: 'Sora', sans-serif;
+    padding: 20px;
+    border-left: 2px solid #ddd;
+    width: 50%;
+    overflow-x: hidden;
+}
+
+/* Bottom Tools Section */
+#bottom-tools {
+    width: 100%;
+    height: 50px;
+    background: #3b3b3b;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 2px solid #444;
+}
+
+/* Export PDF Button */
 #export-pdf {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
     padding: 10px 20px;
     font-size: 16px;
-    background-color: #007BFF;
+    background: #007BFF;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    font-weight: bold;
 }
 
 #export-pdf:hover {
-    background-color: #0056b3;
+    background: #0056b3;
+}

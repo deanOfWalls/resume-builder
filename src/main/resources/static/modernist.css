@@ -172,12 +172,38 @@ footer p + p {
     }
 }
 
-/* Print Styling */
+/* Print Styling - Ensure Clean Resume PDF */
 @media print {
-    header p {
-        display: block;
+    /* Hide Markdown Editor During Export */
+    #editor {
+        display: none !important;
     }
+
+    /* Expand the Preview to Full Width */
+    #preview {
+        width: 100% !important;
+        padding: 20px;
+    }
+
+    /* Ensure Background Doesn't Print */
     body {
-        background: none;
+        background: none !important;
+        color: black !important;
+        font-size: 12pt !important;
+    }
+
+    /* Force Black Text for PDF */
+    h1, h2, h3, h4, h5, h6, p, a {
+        color: black !important;
+    }
+
+    /* Remove Link Colors in Print */
+    a {
+        text-decoration: none !important;
+    }
+
+    /* Set Proper Page Margins for PDF */
+    @page {
+        margin: 1in;
     }
 }
